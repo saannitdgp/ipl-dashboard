@@ -46,14 +46,14 @@ public class JobCompletionNotificationListener extends JobExecutionListenerSuppo
             entityManager.createQuery(sq1, Object[].class)
                     .getResultList()
                     .stream()
-                    .map(e -> new Team((String)e[0], (long) e[1]))
+                    .map(e -> new Team(String.valueOf(e[0]), (long) e[1]))
                     .forEach(team -> teamData.put(team.getTeamName(), team));
 
             entityManager.createQuery(sq2, Object[].class)
                     .getResultList()
                     .stream()
                     .forEach(e ->{
-                        Team team = teamData.get((String)e[0]);
+                        Team team = teamData.get(String.valueOf(e[0]));
                         // might be some team which never batted first.
                         team.setTotalMatchPlayed(team.getTotalMatchPlayed() + (long) e[1]);
                     });

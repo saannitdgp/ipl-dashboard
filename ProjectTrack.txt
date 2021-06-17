@@ -19,3 +19,9 @@ Tech I need to implement on this project:
 7. Paginations
 8. Microservice --> different module for frontend and backend
 
+Things i need to learn:
+1. React Hooks
+2. Kafka
+3. Jenkins
+4. Redis
+

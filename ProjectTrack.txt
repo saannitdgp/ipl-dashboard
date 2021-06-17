@@ -1,0 +1,21 @@
+Day1
+
+
+
+
+
+Additional Task:
+
+1. Spring Batch
+2. some exercise on spring batch : https://www.youtube.com/watch?v=1XEX-u12i0A
+
+Tech I need to implement on this project:
+1. Swagger
+2. Redis
+3. Kafka
+4. Jenkins
+5. Spring Batch
+6. Support for updating data
+7. Paginations
+8. Microservice --> different module for frontend and backend
+

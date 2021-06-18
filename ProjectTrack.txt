@@ -16,7 +16,7 @@ Tech I need to implement on this project:
 4. Jenkins
 5. Spring Batch
 6. Support for updating data
-7. Paginations
+7. Pagination
 8. Microservice --> different module for frontend and backend
 
 Things i need to learn:

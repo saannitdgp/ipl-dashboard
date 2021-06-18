@@ -23,9 +23,10 @@ public class MatchDataProcessor implements ItemProcessor<MatchInputData, Match> 
         match.setId(Long.valueOf(inputData.getId()));
         match.setDate(LocalDate.parse(inputData.getDate()));
         match.setPlayerOfMatch(inputData.getPlayer_of_match());
+        match.setVenue(inputData.getVenue());
         if("bat".equals(inputData.getToss_decision())){
             match.setTeam1(inputData.getToss_winner());
-            match.setTeam2(inputData.getTeam2().equals(inputData.getToss_winner()) ? inputData.getTeam1() : inputData.getTeam1());
+            match.setTeam2(inputData.getTeam2().equals(inputData.getToss_winner()) ? inputData.getTeam1() : inputData.getTeam2());
         }
         else {
             match.setTeam1(inputData.getTeam1().equals(inputData.getToss_winner()) ? inputData.getTeam2() : inputData.getTeam1());

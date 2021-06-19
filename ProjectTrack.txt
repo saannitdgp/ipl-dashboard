@@ -24,4 +24,5 @@ Things i need to learn:
 2. Kafka
 3. Jenkins
 4. Redis
+5. React Saas
 

@@ -12,14 +12,11 @@ export const MatchPage =  ()  => {
            
             const fetchMatches = async () => {
                 var fetchURL = `http://localhost:8080/teams/${teamName}/matches/${year}`;
-                console.log("fetch url for matches");
                 const response = await fetch(fetchURL);
                 const data = await response.json();
-
                 setTeam(data);
-
             };
-            fetchMatches();
+            fetchMatches(); 
         },[teamName] );
   return (
     <div className="MatchPage">

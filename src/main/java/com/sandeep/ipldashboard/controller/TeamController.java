@@ -24,19 +24,24 @@ public class TeamController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(TeamController.class);
 
-    @GetMapping("/teams/{teamName}")
-    public Team getTeam(@PathVariable String teamName) {
-        LOGGER.info("Request for Matches played by team :{}", teamName);
-        Team response = teamRepository.getTeamByTeamName(teamName);
-        response.setMatches(matchRepository.getLatestMatchByTeam(teamName, 4));
-        return response;
-    }
-
     @GetMapping("/teams/{teamName}/matches")
     public List<Match> getMatchForTeam(@PathVariable String teamName, @RequestParam int year){
         LOGGER.info("Request for Match played by team : {} in year : {}", teamName, year);
         LocalDate startDate = LocalDate.of(year,1,1);
         LocalDate endDate = LocalDate.of(year,12,31);
         return matchRepository.getMatchesByTeamBetweenDates(teamName, startDate, endDate);
+    }
+
+    @GetMapping("/teams/{teamName}")
+    public Team getTeam(@PathVariable String teamName) {
+        LOGGER.info("Request for Matches played by team :{}", teamName);
+        Team response = teamRepository.getTeamByTeamName(teamName);
+        if(response != null)
+        response.setMatches(matchRepository.getLatestMatchByTeam(teamName, 4));
+        return response;
+    }
+    @GetMapping("/teams")
+    public Iterable<Team> getTeams() {
+        return teamRepository.findAll();
     }
 }

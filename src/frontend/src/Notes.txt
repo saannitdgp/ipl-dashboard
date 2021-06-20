@@ -1,0 +1,1 @@
+1. How to create env file and use env variable: https://stackoverflow.com/questions/53237293/react-evironment-variables-env-return-undefined

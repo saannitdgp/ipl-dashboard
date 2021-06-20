@@ -1,6 +1,6 @@
 import { React } from 'react'
 import {Link} from 'react-router-dom'
-import './MatchSmallCard';
+import './scss/MatchSmallCard.scss';
 
 export const MatchSmallCard =  (props)  => {
   if(!props.match) return null;

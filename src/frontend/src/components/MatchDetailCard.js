@@ -1,6 +1,6 @@
 import {React} from 'react'
 import {Link} from 'react-router-dom'
-import './MatchDetailCard.scss'
+import './scss/MatchDetailCard.scss'
 export const MatchDetailCard =  (props)  => {
   if(!props.match) return <div></div>
   const oppositionTeamName = props.teamName === props.match.team1 ? props.match.team2 : props.match.team1;

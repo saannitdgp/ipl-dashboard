@@ -11,7 +11,7 @@ export const HomePage =  ()  => {
         () => {
            
             const fetchTeams = async () => {
-                var fetchURL = `http://localhost:8080/teams/`;
+                var fetchURL = `${process.env.REACT_APP_API_ROOT_URL}/teams/`;
                 const response = await fetch(fetchURL);
                 const data = await response.json();
 
@@ -23,11 +23,11 @@ export const HomePage =  ()  => {
   return (
     <div className="HomePage">
     <div className="header-section">
-         <h1 className="app-name">IPL DashBoard</h1>
+         <h1 className="app-name">IPL Dashboard</h1>
     </div>
     <div className="team-grid">
         {
-            teams.map( team => <TeamTile teamName ={team.teamName}/>)
+            teams.map( team => <TeamTile key={team.id} teamName ={team.teamName}/>)
         }
     </div>
 

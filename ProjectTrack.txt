@@ -26,3 +26,6 @@ Things i need to learn:
 4. Redis
 5. React Saas
 6. Cross Origin Call : https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
+
+
+Command Used for creating build jar:  ./mvnw install
